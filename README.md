@@ -6,6 +6,8 @@ A wrapper to work with the Spotify API and do cool stuff.
 
 I still haven't gotten around to finish writing this. So sorry...
 
+More stuff just to see if coveralls is up and running after inputting the token over at Travis CI
+
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisities
