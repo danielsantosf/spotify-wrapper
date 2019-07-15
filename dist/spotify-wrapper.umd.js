@@ -114,13 +114,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var getAlbum = function getAlbum(id) {
-  return fetch("".concat(_config__WEBPACK_IMPORTED_MODULE_0__["API_URL"], "/albums/").concat(id)).then(_utils__WEBPACK_IMPORTED_MODULE_1__["toJSON"]);
+  return fetch("".concat(_config__WEBPACK_IMPORTED_MODULE_0__["API_URL"], "/albums/").concat(id), _config__WEBPACK_IMPORTED_MODULE_0__["HEADERS"]).then(_utils__WEBPACK_IMPORTED_MODULE_1__["toJSON"]);
 };
 var getAlbums = function getAlbums(ids) {
-  return fetch("".concat(_config__WEBPACK_IMPORTED_MODULE_0__["API_URL"], "/albums/?ids=").concat(ids)).then(_utils__WEBPACK_IMPORTED_MODULE_1__["toJSON"]);
+  return fetch("".concat(_config__WEBPACK_IMPORTED_MODULE_0__["API_URL"], "/albums/?ids=").concat(ids), _config__WEBPACK_IMPORTED_MODULE_0__["HEADERS"]).then(_utils__WEBPACK_IMPORTED_MODULE_1__["toJSON"]);
 };
 var getAlbumTracks = function getAlbumTracks(id) {
-  return fetch("".concat(_config__WEBPACK_IMPORTED_MODULE_0__["API_URL"], "/albums/").concat(id, "/tracks")).then(_utils__WEBPACK_IMPORTED_MODULE_1__["toJSON"]);
+  return fetch("".concat(_config__WEBPACK_IMPORTED_MODULE_0__["API_URL"], "/albums/").concat(id, "/tracks"), _config__WEBPACK_IMPORTED_MODULE_0__["HEADERS"]).then(_utils__WEBPACK_IMPORTED_MODULE_1__["toJSON"]);
 };
 
 /***/ }),
@@ -129,13 +129,20 @@ var getAlbumTracks = function getAlbumTracks(id) {
 /*!***********************!*\
   !*** ./src/config.js ***!
   \***********************/
-/*! exports provided: API_URL */
+/*! exports provided: API_URL, HEADERS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "API_URL", function() { return API_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HEADERS", function() { return HEADERS; });
+var TOKEN_API = 'BQCVDDD2sUWPpMJbPOCjr-99iL2ydebofsxiubjlVCauj1rKWCZwAhojbtDDnHURPP3WVrUHJqb_Skb7yh1pFx7ZLXoHx07Ht-DpeSqGOOhu2mzdDQfh0QT23VSbSqOEei2eYwH2BZlarWPKiNhRND5FS7FDHr5JvA';
 var API_URL = 'https://api.spotify.com/v1';
+var HEADERS = {
+  headers: {
+    Authorization: "'Bearer ".concat(TOKEN_API, "'")
+  }
+};
 
 /***/ }),
 
@@ -191,7 +198,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var search = function search(query, type) {
-  return fetch("https://api.spotify.com/v1/search?q=".concat(query, "&type=").concat(type)).then(_utils__WEBPACK_IMPORTED_MODULE_1__["toJSON"]);
+  return fetch("https://api.spotify.com/v1/search?q=".concat(query, "&type=").concat(type), _config__WEBPACK_IMPORTED_MODULE_0__["HEADERS"]).then(_utils__WEBPACK_IMPORTED_MODULE_1__["toJSON"]);
 };
 var searchArtists = function searchArtists(query) {
   return search(query, 'artist');
