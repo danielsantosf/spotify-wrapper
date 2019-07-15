@@ -3,13 +3,13 @@ import {
   searchArtists,
   searchAlbums,
   searchTracks,
-  searchPlaylists
+  searchPlaylists,
 } from './main';
 
 import {
   getAlbum,
   getAlbums,
-  getAlbumTracks
+  getAlbumTracks,
 } from './album';
 
 export {
@@ -20,5 +20,5 @@ export {
   searchPlaylists,
   getAlbum,
   getAlbums,
-  getAlbumTracks
-}
+  getAlbumTracks,
+};
